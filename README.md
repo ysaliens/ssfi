@@ -19,6 +19,8 @@ The following is configurable:
 ## Performance
 SSFI was designed for speed. On my local virtual machine, it counted 100 MB worth of text files (in chunks of 6 MB books) in ~8 seconds multithreaded. More performance metrics to be added.
 
+## Architecture
+
 ## Testing
 
 ## Tradeoffs and considerations
