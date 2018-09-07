@@ -6,5 +6,6 @@ A very fast multi-threaded word frequency counter written in C++. SSFI recursive
 * Thread pool. Configurable number of worker threads are all part of a thread pool with a queue. Each thread also keeps the same hash map while processing different text files as the threads utilize thread IDs to access the same hash maps. This avoids allocating new hash maps every time a worker thread processes a new file and aids in efficiency.
 
 ## Building
-Execute "make" from root directory. SSFI requires the C++ Boost 1.66 or higher library. It can be compiled with g++ or clang++.
+Execute "make" from root directory. 
+SSFI requires the C++ Boost 1.66 or higher library.
 
