@@ -9,3 +9,9 @@ A very fast multi-threaded word frequency counter written in C++. SSFI recursive
 Execute "make" from root directory. 
 SSFI requires the C++ Boost 1.66 or higher library.
 
+## Command Line Options
+The following is configurable:
+* path -p: Path to recursively index
+* threads -t: Number of worker threads to use
+* words -w: Top N words to print
+* help -h: Help menu
