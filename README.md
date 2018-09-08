@@ -17,7 +17,7 @@ The following is configurable:
 * -h: Help menu
 
 ## Performance
-SSFI was designed for speed and scalability. On my local virtual machine with 8 cores, it counted 100 MB worth of text (in chunks of 6 MB books) in ~8 seconds multithreaded. Performance tables for 100MB of text below:  
+SSFI was designed for speed and scalability. On a virtual machine with 8 cores, it counted 100 MB worth of text (in chunks of 6 MB books) in ~8 seconds multithreaded. Performance stats for 100MB of text below:  
   
 Threads | Total Time (Unordered Map) | Total Time (Ordered Map)
 ------------ | ------------- | -------------
