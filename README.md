@@ -11,10 +11,10 @@ SSFI requires the C++ Boost 1.66 or higher library.
 
 ## Command Line Options
 The following is configurable:
-* path -p: Path to recursively index
-* threads -t: Number of worker threads to use
-* words -w: Top N words to print
-* help -h: Help menu
+* --path --p: Path to recursively index
+* --threads -t: Number of worker threads to use
+* --words -w: Top N words to print
+* --help -h: Help menu
 
 ## Performance
 SSFI was designed for speed. On my local virtual machine, it counted 100 MB worth of text files (in chunks of 6 MB books) in ~8 seconds multithreaded. More performance metrics to be added.
