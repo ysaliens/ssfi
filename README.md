@@ -29,7 +29,8 @@ Threads | Total Time (Unordered Map) | Total Time (Ordered Map)
 32 | 8.173s | 15.836s
   
   
-As can be seen from the tables, using unsorted maps brings in 2x speed improvement. The optimal number of threads (for my VM) also seems to be 4.
+As can be seen from the tables, using unsorted maps brings in a 2x speed improvement.  
+The optimal number of threads (for my VM) also seems to be 4.
 
 ## Architecture
 Due to the scope of the task, the design of SSFI has been kept simple. There are no classes, logging, or a lot of tests.  
