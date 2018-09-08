@@ -2,7 +2,7 @@
 A fast multi-threaded word frequency counter written in C++. SSFI recursively scans a given directory for files ending in .txt. It then queues those files to be processed by worker threads. Worker threads will pick up files from the queue and scan them, counting how many occurences of each word they see. Once complete, the program prints the top 10 words and their counts.
 
 ## Features
-* __Unordered__ hash maps for storing word frequency. Each thread gets it's own hash map to count words. When processing is complete, main thread merges the hash maps into a master hash map. This allows for very efficient processing and avoids the need for locks or synchronization. This design also allows the application to scale well with additional threads.
+* __Unordered lockless__ hash maps for storing word frequency. Each thread gets it's own hash map to count words. When processing is complete, main thread merges the hash maps into a master hash map. This allows for very efficient processing and avoids the need for locks or synchronization. This design also allows the application to scale well with additional threads.
 * Thread pool. Configurable number of worker threads are part of a thread pool with a queue. Worker threads use thread IDs to accumulate data into the same hash map for the duration of processing. This avoids allocating new memory for hash maps every time a worker thread processes a file.
 
 ## Building
