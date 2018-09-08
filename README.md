@@ -24,8 +24,7 @@ Due to the scope of the task, the design of SSFI has been kept simple. There are
 This is deliberate - if the project is ever grown it would be very easy to adapt it and less code helps readibility/maintainablity.
 
 ## Testing
-When compiled, the test executable `test_worker` is located under `test/`  
-Execute from the `test/` directory.  
+When compiled, the test executable `test_worker` is located under `test/`. Execute from the `test/` directory.  
 The tests cover the worker code - namely counting words in a single file.  
 
 A full test can be done by running the ssfi executable with `./ssfi -p files`.  
