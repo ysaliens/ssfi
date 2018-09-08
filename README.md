@@ -24,11 +24,13 @@ Due to the scope of the task, the design of SSFI has been kept simple. There are
 This is deliberate - if the project is ever grown it would be very easy to adapt it and less code helps readibility/maintainablity.
 
 ## Testing
-When compiled, the test executable (test_worker) is located under test/  
-Execute from the test/ directory  
+When compiled, the test executable `test_worker` is located under `test/`  
+Execute from the `test/` directory.  
 The tests cover the worker code - namely counting words in a single file.  
 
-A full test can be done by running the ssfi executable with  `<addr>` "./ssfi -p files"
+A full test can be done by running the ssfi executable with `./ssfi -p files`.  
+If files directory has not been altered, the output will be:  
+![Test](/files/test.png)
 
 ## Future Work and improvements
-Even though each thread keeps a separate hash map for the duration of processing, the hash maps have to eventually be merged in order to compute metrics. The main thread does this at the end. An optimization would be to switch to using a concurrent hash map package that allows all threads to access the same global hash map without the need for locks. This would bring improvements to speed and memory usage as we wouldn't keep multiple hash maps or merge them. Switching away from using C++ strings (tolower) may bring additional speed.
+Even though each thread keeps a separate hash map for the duration of processing, the hash maps have to eventually be merged in order to compute metrics. The main thread does this at the end. An optimization would be to switch to using a concurrent hash map package that allows all threads to access the same global hash map without the need for locks. This would bring improvements to speed and memory usage as we wouldn't keep multiple hash maps or merge them. Switching away from using C++ strings (tolower) may bring additional speed. If the project is grown, additional tests should be added.
