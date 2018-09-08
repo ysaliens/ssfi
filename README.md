@@ -17,7 +17,7 @@ The following is configurable:
 * -h: Help menu
 
 ## Performance
-SSFI was designed for speed and scalability. On my local virtual machine, it counted 100 MB worth of text files (in chunks of 6 MB books) in ~8 seconds multithreaded. More performance metrics to be added.
+SSFI was designed for speed and scalability. On my local virtual machine, it counted 100 MB worth of text files (in chunks of 6 MB books) in ~8 seconds multithreaded.
 
 ## Architecture
 Due to the scope of the task, the design of SSFI has been kept simple. There are no classes, logging, or a lot of tests.  
@@ -31,5 +31,5 @@ A full test can be done by running the ssfi executable with `./ssfi -p files`.
 If files directory has not been altered and the code works, the words will match the frequency:  
 ![Test](/files/test.png)
 
-## Future Work and improvements
+## Future Work
 Even though each thread keeps a separate hash map for the duration of processing, the hash maps have to eventually be merged in order to compute metrics. The main thread does this at the end. An optimization would be to switch to using a concurrent hash map package that allows all threads to access the same global hash map without the need for locks. This would bring improvements to speed and memory usage as we wouldn't keep multiple hash maps or merge them. Switching away from using C++ strings (tolower) may bring additional speed. If the project is grown, additional tests should be added.
