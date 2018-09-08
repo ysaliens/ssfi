@@ -29,7 +29,7 @@ Execute from the `test/` directory.
 The tests cover the worker code - namely counting words in a single file.  
 
 A full test can be done by running the ssfi executable with `./ssfi -p files`.  
-If files directory has not been altered, the output will be:  
+If files directory has not been altered and the code works, the words will match the frequency:  
 ![Test](/files/test.png)
 
 ## Future Work and improvements
