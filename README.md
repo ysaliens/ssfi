@@ -18,27 +18,17 @@ The following is configurable:
 
 ## Performance
 SSFI was designed for speed and scalability. On my local virtual machine with 8 cores, it counted 100 MB worth of text (in chunks of 6 MB books) in ~8 seconds multithreaded. Performance tables for 100MB of text below:  
-
-**Unordered maps implementation**  
-Threads | Total Time
------------- | -------------
-1 | 10.553s
-2 | 11.316s
-4 | 7.905s
-8 | 8.303s
-16 | 9.814s
-32 | 8.173s
   
-**Ordered maps implementation**  
-Threads | Total Time
------------- | -------------
-1 | 22.078s
-2 | 17.662s
-4 | 15.003s
-8 | 15.927s
-16 | 17.099s
-32 | 15.836s
-
+Threads | Total Time (Unordered Map) | Total Time (Ordered Map)
+------------ | ------------- | -------------
+1 | 10.553s | 22.078s
+2 | 11.316s | 17.662s
+4 | 7.905s | 15.003s
+8 | 8.303s | 15.927s
+16 | 9.814s | 17.099s
+32 | 8.173s | 15.836s
+  
+  
 As can be seen from the tables, using unsorted maps brings in 2x speed improvement. The optimal number of threads (for my VM) also seems to be 4.
 
 ## Architecture
