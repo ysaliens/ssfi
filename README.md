@@ -20,7 +20,8 @@ The following is configurable:
 SSFI was designed for speed and scalability. On my local virtual machine, it counted 100 MB worth of text files (in chunks of 6 MB books) in ~8 seconds multithreaded. More performance metrics to be added.
 
 ## Architecture
-Due to the scope of the task, the design of SSFI has been kept simple. There are no classes, logging, or a lot of tests. This is deliberate - if the project is ever grown it would be very easy to adapt it and less code helps readibility/maintainablity.
+Due to the scope of the task, the design of SSFI has been kept simple. There are no classes, logging, or a lot of tests.  
+This is deliberate - if the project is ever grown it would be very easy to adapt it and less code helps readibility/maintainablity.
 
 ## Testing
 
