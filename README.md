@@ -31,7 +31,7 @@ Threads | Total Time (Unordered Map) | Total Time (Ordered Map)
   
   
 As can be seen from the tables, using unsorted maps brings in a 2x speed improvement.  
-The optimal number of threads (for my VM with 8 cores) is 8.
+The optimal number of threads (for my VM with 8 cores) is 8. Since the VM has 8 cores, adding additional threads (past 8) does not improve performance as the threads just become context switched.
 
 ## Architecture
 Due to the scope of the task, the design of SSFI has been kept simple. There are no classes, logging, or a lot of tests.  
